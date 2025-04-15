@@ -60,7 +60,88 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Basic Counter with Riverpod')),
             SizedBox(
               height: 24,
-            )
+            ),
+            FilledButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) =>
+                  //             const CounterPage()));
+                },
+                child: Text('Provider')),
+            SizedBox(
+              height: 24,
+            ),
+            FilledButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) =>
+                  //             const CounterPage()));
+                },
+                child: Text('StateProvider')),
+            SizedBox(
+              height: 24,
+            ),
+            FilledButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) =>
+                  //             const CounterPage()));
+                },
+                child: Text('FutureProvider')),
+            SizedBox(
+              height: 24,
+            ),
+            FilledButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) =>
+                  //             const CounterPage()));
+                },
+                child: Text('StreamProvider')),
+            SizedBox(
+              height: 24,
+            ),
+            FilledButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) =>
+                  //             const CounterPage()));
+                },
+                child: Text('NotifierProvider')),
+            SizedBox(
+              height: 24,
+            ),
+            FilledButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) =>
+                  //             const CounterPage()));
+                },
+                child: Text('StateNotifierProvider')),
+            SizedBox(
+              height: 24,
+            ),
+            FilledButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) =>
+                  //             const CounterPage()));
+                },
+                child: Text('ChangeNotifierProvider')),
           ]        ),
       ),
     );        
