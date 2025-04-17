@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_demo/demo/counter/ui/counter_page.dart';
+import 'package:flutter_riverpod_demo/demo/provider/ui/provider_page.dart';
 
 void main() {
   runApp(ProviderScope(child: MyApp()));
@@ -63,11 +64,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FilledButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) =>
-                  //             const CounterPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const ProviderPage()));
                 },
                 child: Text('Provider')),
             SizedBox(
