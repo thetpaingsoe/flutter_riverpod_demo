@@ -1,7 +1,7 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'counter.g.dart';
 
-@Riverpod()
+@riverpod
 class Counter extends _$Counter{
   @override
   int build() {
