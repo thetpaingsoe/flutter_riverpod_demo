@@ -7,4 +7,7 @@ class DataRepository {
     await Future.delayed(const Duration(seconds: 1));
     throw Exception('Error fetching data');
   }
+  String fetchCacheData() {
+    return 'Showing Data from Cache.';
+  }
 }

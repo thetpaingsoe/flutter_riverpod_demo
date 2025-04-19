@@ -6,7 +6,7 @@ part of 'data_list.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$dataListHash() => r'1e5f1a45575bfdb9377f432d2556d0bf50f30b71';
+String _$dataListHash() => r'49fe98049db908d12b946222bd894b75c32eb852';
 
 /// See also [DataList].
 @ProviderFor(DataList)

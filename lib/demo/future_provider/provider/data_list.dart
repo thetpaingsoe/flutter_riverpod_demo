@@ -13,9 +13,14 @@ class DataList extends _$DataList {
   }
 
   Future<String> fetchData() async {
-   state = const AsyncValue.loading();
+
+    final repo = DataRepository();
+    // This is the sample of 
+    // returning data from cache
+    // before fetching data from server
+    state = AsyncValue.data(repo.fetchCacheData());
     try {
-      final repo = DataRepository();
+      
       final data = await repo.fetchData();
       state = AsyncValue.data(data);
       return data;
