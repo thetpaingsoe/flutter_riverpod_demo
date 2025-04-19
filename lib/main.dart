@@ -3,7 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_demo/demo/counter/ui/counter_page.dart';
 import 'package:flutter_riverpod_demo/demo/provider/ui/provider_page.dart';
 
-import 'demo/state-provider/ui/state_provider_page.dart';
+import 'demo/state_provider/ui/state_provider_page.dart';
+import 'demo/stream_provider/ui/stream_provider_page.dart';
 
 void main() {
   runApp(ProviderScope(child: MyApp()));
@@ -90,13 +91,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FilledButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) =>
-                  //             const CounterPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const StreamProviderPage()));
                 },
-                child: Text('FutureProvider')),
+                child: Text('StreamProvider')),
             SizedBox(
               height: 24,
             ),
@@ -108,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   //         builder: (context) =>
                   //             const CounterPage()));
                 },
-                child: Text('StreamProvider')),
+                child: Text('FutureProvider')),
             SizedBox(
               height: 24,
             ),
