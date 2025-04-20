@@ -30,7 +30,7 @@ class StateProviderPage extends ConsumerWidget {
               const SizedBox(
                 height: 24,
               ),
-              Switch(value: ref.read(themeModeProvider) == ThemeMode.dark , onChanged: 
+              Switch(value: ref.watch(themeModeProvider) == ThemeMode.dark , onChanged: 
                 (value) {
                   ref.read(themeModeProvider.notifier).state =
                       value ? ThemeMode.dark : ThemeMode.light;
