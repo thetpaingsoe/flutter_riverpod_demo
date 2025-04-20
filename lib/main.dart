@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_demo/demo/counter/ui/counter_page.dart';
 import 'package:flutter_riverpod_demo/demo/future_provider/ui/future_provider_page.dart';
 import 'package:flutter_riverpod_demo/demo/provider/ui/provider_page.dart';
+import 'package:flutter_riverpod_demo/demo/state_notifier_provider/view/state_notifier_provider_page.dart';
 
 import 'demo/notifier_provider/view/notifier_provider_page.dart';
 import 'demo/state_provider/ui/state_provider_page.dart';
@@ -129,11 +130,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FilledButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) =>
-                  //             const CounterPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              StateNotifierProviderPage()));
                 },
                 child: Text('StateNotifierProvider')),
             SizedBox(
