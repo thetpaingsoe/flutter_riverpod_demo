@@ -1,16 +1,18 @@
-# flutter_riverpod_demo
+# Flutter Riverpod Demo
 
-A new Flutter project.
+This project demostrates basic usage of the Riverpod package in Flutter.  
+Each demo is self-contained in its own folder for easy navigation.
 
-## Getting Started
+## 🛠️ Setup
+- Clone the project
+- Run `flutter pub get`
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🗂️ Demos
+- [Sample Counter](lib/demo/counter)
+- [Provider](lib/demo/provider)
+- [StateProvider](lib/demo/state_notifier_provider)
+- [StreamProvider](lib/demo/stream_provider)
+- [FutureProvider](lib/demo/future_provider)
+- [NotifierProvider](lib/demo/notifier_provider)
+- [StateNotifierProvider](lib/demo/state_notifier_provider)
+- [ChangeNotifierProvider](lib/demo/change_notifier_provider)
