@@ -30,6 +30,7 @@ class CounterPage extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             FloatingActionButton(
+              key: const Key('increment-button'),
               heroTag: 'increment',
               onPressed: () {
                 ref.read(counterProvider.notifier).increment();
@@ -42,6 +43,7 @@ class CounterPage extends ConsumerWidget {
               height: 16,
             ),
             FloatingActionButton(
+              key: const Key('decrement-button'),
               heroTag: 'decrement',
               onPressed: () {
                 ref.read(counterProvider.notifier).decrement();
