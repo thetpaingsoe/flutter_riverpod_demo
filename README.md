@@ -7,6 +7,10 @@ Each demo is self-contained in its own folder for easy navigation.
 - Clone the project
 - Run `flutter pub get`
 
+## 🧪 Unit Test & Widget Test
+- Run `flutter test`
+- All test cases are under [test\\](https://github.com/thetpaingsoe/flutter_riverpod_demo/tree/main/test) directory.
+
 ## 🗂️ Demos
 - [Sample Counter](lib/demo/counter)
 - [Provider](lib/demo/provider)
