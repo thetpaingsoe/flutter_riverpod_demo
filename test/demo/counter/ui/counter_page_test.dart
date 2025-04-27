@@ -25,7 +25,7 @@ void main() {
 
     // Verify the counter increased
     expect(find.text("Count: 1"), findsOneWidget);
-    expect(find.text("Count: 0"), findsNothing);
+    expect(find.text  ("Count: 0"), findsNothing);
 
     // Decrease the counter
     await tester.tap(find.byKey(const Key('decrement-button')));
