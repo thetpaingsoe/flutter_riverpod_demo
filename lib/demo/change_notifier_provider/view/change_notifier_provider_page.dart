@@ -21,11 +21,13 @@ class ChangeNotifierProviderPage extends ConsumerWidget {
             Text('Change Notifier Provider Example'),
             const SizedBox(height: 16),
             FilledButton(
+              key: const Key('fetch-success'),
               onPressed: () => ref.read(dataListProvider.notifier).fetchData(),
               child: const Text('Fetch Data : Success'),
             ),
             const SizedBox(height: 16),
             FilledButton(
+              key: const Key('fetch-error'),
               onPressed:
                   () => ref.read(dataListProvider.notifier).fetchErrorData(),
               child: const Text('Fetch Data : Error'),
