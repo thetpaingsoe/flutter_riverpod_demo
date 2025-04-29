@@ -26,8 +26,8 @@ class NotifierProviderPage extends ConsumerWidget {
             Container(
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: TextField(
+                key: const Key("email-textfield"),
                 controller: textEditingController,
-
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Enter Email',
@@ -48,6 +48,7 @@ class NotifierProviderPage extends ConsumerWidget {
             subscribeStatus.isLoading
                 ? const CircularProgressIndicator()
                 : ElevatedButton(
+                  key: const Key("subscribe"),
                   onPressed: () {
                     ref
                         .read(subscribeEmailProvider.notifier)
