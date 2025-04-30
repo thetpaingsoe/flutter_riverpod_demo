@@ -6,15 +6,14 @@ part 'data_list.g.dart';
 
 @riverpod
 class DataList extends _$DataList {
+
   @override
-  Future<String> build() {
-    // i want to retur a blnak string
+  Future<String> build({required DataRepository repo}) async{
     return Future.value('');
   }
 
   Future<String> fetchData() async {
 
-    final repo = DataRepository();
     // This is the sample of 
     // returning data from cache
     // before fetching data from server
@@ -31,9 +30,8 @@ class DataList extends _$DataList {
   }
 
   Future<String> fetchErrorData() async {
-   state = const AsyncValue.loading();
+   state = AsyncValue.data(repo.fetchCacheData());
     try {
-      final repo = DataRepository();
       final data = await repo.fetchError();
       state = AsyncValue.data(data);
       return data;
