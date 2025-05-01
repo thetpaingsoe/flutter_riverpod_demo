@@ -4,12 +4,13 @@ import 'package:flutter_riverpod_demo/demo/future_provider/provider/data_list.da
 import 'package:flutter_riverpod_demo/demo/future_provider/repository/data_repository.dart';
 
 class FutureProviderPage extends ConsumerWidget {
-  const FutureProviderPage({super.key});
+  FutureProviderPage({super.key});
+  final repo = DataRepository();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
 
-    final repo = DataRepository();
+    
     final dataList = ref.watch(dataListProvider(repo: repo));
 
     return Scaffold(
@@ -29,13 +30,17 @@ class FutureProviderPage extends ConsumerWidget {
             const SizedBox(
               height: 24,
             ),
-            FilledButton(onPressed: () {
+            FilledButton(
+              key: const Key('fetchData'),
+              onPressed: () {
               ref.read(dataListProvider(repo: repo).notifier).fetchData();
             }, child: Text('Fetch Data : Success')),
             const SizedBox(
               height: 24,
             ),
-            FilledButton(onPressed: () {
+            FilledButton(
+              key: const Key('fetchErrorData'),
+              onPressed: () {
               ref.read(dataListProvider(repo: repo).notifier).fetchErrorData();
             }, child: Text('Fetch Data : Error')),
             const SizedBox(

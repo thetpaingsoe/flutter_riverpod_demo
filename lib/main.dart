@@ -111,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              const FutureProviderPage()));
+                              FutureProviderPage()));
                 },
                 child: Text('FutureProvider')),
             SizedBox(

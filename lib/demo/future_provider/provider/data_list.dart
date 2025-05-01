@@ -7,6 +7,11 @@ part 'data_list.g.dart';
 @riverpod
 class DataList extends _$DataList {
 
+
+  // Note : 
+  // Here we shouldn't use DataRepository as parameter in constructor
+  // It should be provided by the provider
+  // But here we are using it for the sample of using .family 
   @override
   Future<String> build({required DataRepository repo}) async{
     return Future.value('');
@@ -25,7 +30,7 @@ class DataList extends _$DataList {
       return data;
     } catch (e, st) {
       state = AsyncValue.error(e, st);
-      rethrow;
+      return e.toString();
     }
   }
 
@@ -37,7 +42,7 @@ class DataList extends _$DataList {
       return data;
     } catch (e, st) {
       state = AsyncValue.error(e, st);
-      rethrow;
+      return e.toString();
     }
   }
 
