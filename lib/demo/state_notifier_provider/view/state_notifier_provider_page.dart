@@ -29,6 +29,7 @@ class StateNotifierProviderPage extends ConsumerWidget {
             Container(
               padding: const EdgeInsets.only(left: 16, right:16),
               child: TextField(
+                key: const Key('todo-text-field'),
                 controller: _todoController,
                 decoration: const InputDecoration(
                   labelText: 'Todo',
@@ -38,6 +39,7 @@ class StateNotifierProviderPage extends ConsumerWidget {
             ),
             const SizedBox(height: 16),
             FilledButton(
+              key: const Key('add-todo-button'),
               onPressed: () {
                 ref.read(todoProvider.notifier).addTodo(_todoController.text);
                 _todoController.clear();
@@ -59,6 +61,7 @@ class StateNotifierProviderPage extends ConsumerWidget {
                       ),
                     ),
                     trailing: Checkbox(
+                      key: Key('todo-checkbox-${todoList[index].title}'),
                       value: todoList[index].isCompleted, 
                       onChanged: (value) {
                         ref.read(todoProvider.notifier).completeTodo(index);
